@@ -1,3 +1,8 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+        silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 " Enable syntax highlighting and set file encoding/format
 syntax on
@@ -51,49 +56,16 @@ set incsearch            " Show matches as you type
 set hlsearch             " Highlight search matches
 nnoremap <CR> :noh<CR><CR> " Clear search highlight on Enter
 
-" key bindings
-nnoremap <silent> <C-f> :Files<CR>
-
-" Source additional plugin and config files
-so ~/.vim/plugin.vim
-so ~/.vim/plugin-config.vim
-
-" Plugin management using vim-plug
+" Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'                  " Gruvbox color scheme
-Plug 'preservim/nerdtree'               " File explorer
-Plug 'vim-airline/vim-airline'          " Status line
-Plug 'sheerun/vim-polyglot'             " Language packs
-Plug 'mattn/emmet-vim'                  " HTML/CSS completion
-Plug 'tpope/vim-commentary'             " Easy commenting
-Plug 'tpope/vim-surround'               " Surround text with delimiters
-Plug 'dense-analysis/ale'               " Linting and code checking
-Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Language Server Protocol
-Plug 'preservim/tagbar'                 " Code structure browser
-Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'  " Fuzzy file finder
-Plug 'yggdroot/indentline'              " Display indentation levels
+" Declare the list of plugins.
+Plug 'joshdick/onedark.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-commentary'
 
+" List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
-" Plugin commands
-" PlugInstall
-" PlugUpdate
-" PlugStatus
-" PlugClean
-" PlugUpgrade
-
-" COLOR & THEME CONFIGURATION
-set termguicolors         " Enable true color support
-let g:gruvbox_italic=1    " Use italics in Gruvbox
-colorscheme gruvbox       " Set Gruvbox theme
-set background=dark       " Dark background
-
-" Transparent background
-hi Normal guibg=NONE ctermbg=NONE
-
-" Set terminal colors to match Gruvbox theme
-let g:terminal_ansi_colors = [
-    \ '#282828', '#cc241d', '#98971a', '#d79921', '#458588', '#b16286', '#689d6a', '#a89984',
-    \ '#928374', '#fb4934', '#b8bb26', '#fabd2f', '#83a598', '#d3869b', '#8ec07c', '#ebdbb2',
-\]
+" onedark plugin
+colorscheme onedark
