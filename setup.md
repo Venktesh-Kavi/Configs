@@ -12,6 +12,8 @@ Pre Notes
 - arm64 for M1 chip architecture.
 - brew install on intel chip location is /opt/local/bin. for m1 it is /opt/homebrew/bin. More info on homebrew here [Ref](https://docs.google.com/document/d/1gMaNuCTINo916We7O-J58-BzPPv02izR8Gs2qvhBEi8/edit?tab=t.0#heading=h.5wtmvwtde1vx)
 
+**In case PATH env variable is overriden by accident, (Ref)[this: https://www.reddit.com/r/bash/comments/kbq6s5/i_accidentally_killed_my_path_and_now_all_of_the/]**
+
 ### ZSH Installation
 - download from reference [1]
 - verify version
