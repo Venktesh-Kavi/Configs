@@ -68,6 +68,40 @@ powerlevel10k theme plugin (https://github.com/romkatv/powerlevel10k)
     ```
          echo 'export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"' >> ~/.zshrc
     ```
+## Bat
+
+- Bat supports syntax highlighting, plus has git integration to show changes in file
+- Bat by defaults pipes the output to a pager (less). If you dont have we can set bat --paging=never
+- View multiple files at once
+
+- Download tar from releases
+    ```
+        https://github.com/sharkdp/bat/releases
+
+        tar xzf bat.tar -C ~
+        mv bat-* bat
+        
+        echo "export PATH='Users/venktesh.k/bat:$PATH" >> ~/.zshrc
+
+        alias cat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
+    ```
+
+- Some features
+
+    ```
+        // reading multiple files
+        bat src/*.rs
+    ```
+    
+    ```
+        // reading from stdin
+        curl -s https://sh.rustup.rs | bat
+    ```
+
+    ```
+        // show line numbers
+        bat -n main.rs  # show line numbers (only)
+    ```
 
 ## Terminologies
 
