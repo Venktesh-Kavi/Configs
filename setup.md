@@ -6,6 +6,12 @@
 
 ## Installation
 
+Pre Notes
+- macos unix systems are called darwin.
+- x86 or amd64 stands for intel chip architectures.
+- arm64 for M1 chip architecture.
+- brew install on intel chip location is /opt/local/bin. for m1 it is /opt/homebrew/bin. More info on homebrew here Ref[https://docs.google.com/document/d/1gMaNuCTINo916We7O-J58-BzPPv02izR8Gs2qvhBEi8/edit?tab=t.0#heading=h.5wtmvwtde1vx]
+
 ### ZSH Installation
 - download from reference [1]
 - verify version
@@ -39,6 +45,29 @@ powerlevel10k theme plugin (https://github.com/romkatv/powerlevel10k)
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   ```
+
+## Brew Setup
+
+- install homebrew package manager for macos.
+``` bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+- If /opt/homebrew/bin is not in path. run the following commands
+    ```bash
+            echo >> /Users/venktesh.k/.zprofile
+            echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/venktesh.k/.zprofile
+            eval "$(/opt/homebrew/bin/brew shellenv)"
+    ```
+
+## Postgres Setup
+
+- brew install postgresql@17
+- postgres is keg-only installation. sym-links to the path are not created, commands like psql will not be available.
+- run the below command to set it
+
+    ```
+         echo 'export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"' >> ~/.zshrc
+    ```
 
 ## Terminologies
 
