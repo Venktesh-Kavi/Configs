@@ -65,7 +65,7 @@ powerlevel10k theme plugin (https://github.com/romkatv/powerlevel10k)
 - postgres is keg-only installation. sym-links to the path are not created, commands like psql will not be available.
 - run the below command to set it
 
-    ```
+    ``` bash
          echo 'export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"' >> ~/.zshrc
     ```
 ## Bat
@@ -75,7 +75,8 @@ powerlevel10k theme plugin (https://github.com/romkatv/powerlevel10k)
 - View multiple files at once
 
 - Download tar from releases
-    ```
+
+    ``` bash
         https://github.com/sharkdp/bat/releases
 
         tar xzf bat.tar -C ~
@@ -88,17 +89,17 @@ powerlevel10k theme plugin (https://github.com/romkatv/powerlevel10k)
 
 - Some features
 
-    ```
+    ``` bash
         // reading multiple files
         bat src/*.rs
     ```
     
-    ```
+    ``` bash
         // reading from stdin
         curl -s https://sh.rustup.rs | bat
     ```
 
-    ```
+    ``` bash
         // show line numbers
         bat -n main.rs  # show line numbers (only)
     ```
