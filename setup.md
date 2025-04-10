@@ -106,11 +106,25 @@ powerlevel10k theme plugin (https://github.com/romkatv/powerlevel10k)
         bat -n main.rs  # show line numbers (only)
     ```
 
+## IntelliJ IdeaVim
+
+- Multi keystrokes to go down or up. Run the following command.
+
+    ``` bash
+        
+    ``` 
 ## Terminologies
 
 - POSIX: Portable Operating System Interface. (Standards by IEEE for maintaining compatability between operating systems). (https://en.wikipedia.org/wiki/POSIX)
 - BASH: Bourne Again Shell
 - ZSH: Zee Shell
+
+## Mutliple Git Accounts
+
+- https://gist.github.com/rahularity/86da20fe3858e6b311de068201d279e3
+- if we are unable to pull from one repository, eg.., it throws not the owner or do have rights. perform the following:
+    - `ssh-add -l`, check the list of available ssh keys (mostly it will be due to ssh key gone missing not sure of the cause of this).
+    - `ssh-add ~/.ssh/id_rsa_x`, add the missing key and trying pulling.
 
 References
 
