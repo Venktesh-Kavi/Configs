@@ -122,6 +122,16 @@ powerlevel10k theme plugin (https://github.com/romkatv/powerlevel10k)
 ## Mutliple Git Accounts
 
 - https://gist.github.com/rahularity/86da20fe3858e6b311de068201d279e3
+
+    ```
+        // git config
+        [includeIf "gitdir:~/workspace/yubi/"]
+        path = ~/.gitconfig-work
+
+        [includeIf "gitdir:~/workspace/personal/"]
+        path = ~/.gitconfig-personal
+    ```
+
 - if we are unable to pull from one repository, eg.., it throws not the owner or do have rights. perform the following:
     - `ssh-add -l`, check the list of available ssh keys (mostly it will be due to ssh key gone missing not sure of the cause of this).
     - `ssh-add ~/.ssh/id_rsa_x`, add the missing key and trying pulling.
